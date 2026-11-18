@@ -1,0 +1,17 @@
+{
+  "name": "奶龙宇宙 · 三个不太正经的小游戏",
+  "short_name": "奶龙宇宙",
+  "description": "奶龙和凑企鹅的三个小游戏：接住奶龙、敲奶龙、奶龙快跑。",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0e1a",
+  "theme_color": "#0a0e1a",
+  "lang": "zh-CN",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

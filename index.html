@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>奶龙宇宙 · 三个不太正经的小游戏</title>
+<meta name="description" content="奶龙和凑企鹅的三个抽象小游戏：接住奶龙、敲奶龙、奶龙快跑。">
+<meta name="theme-color" content="#0a0e1a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="奶龙宇宙">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+<link rel="icon" href="assets/characters/yellow-front.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#/">
+    <img class="brand-mark" src="assets/characters/yellow-front.png" alt="">
+    <span>奶龙宇宙</span>
+  </a>
+  <div class="topbar-actions">
+    <span class="coin-chip" title="奶龙币">
+      <i class="coin-dot" aria-hidden="true"></i><b id="coin-count">0</b><em>奶龙币</em>
+    </span>
+    <a class="btn small" href="#/shop">商店</a>
+    <button id="sound-toggle" class="icon-btn" type="button" aria-pressed="true" title="开关音效">🔊</button>
+  </div>
+</header>
+
+<main id="app">
+  <section id="home" class="view home">
+    <div class="title-block">
+      <p class="eyebrow">Bean &amp; Penguin</p>
+      <h1>奶龙宇宙</h1>
+      <p class="lede">冰箱里少了一颗豆，凑企鹅说她只是路过。三个小游戏，查清这件事。</p>
+    </div>
+
+    <div class="mascots">
+      <img class="mascot mascot-bean" src="assets/characters/yellow-front.png" alt="奶龙">
+      <p class="mascot-line">「那盒豆子，我一直数着的。」</p>
+      <img class="mascot mascot-penguin" src="assets/characters/penguin-head.png" alt="凑企鹅">
+    </div>
+
+    <h2 class="section-title">选一关</h2>
+    <div class="levels" id="game-grid"></div>
+
+    <div class="buff-bar">
+      <span class="buff-label">强化</span>
+      <div class="buff-list" id="buff-list"></div>
+    </div>
+
+    <footer class="foot">进度只存在这台设备的浏览器里，不用登录，也不会上传。</footer>
+  </section>
+</main>
+
+<!-- 序章剧情 -->
+<div class="modal" id="story-modal" hidden>
+  <div class="modal-card story-card">
+    <p class="eyebrow">序章</p>
+    <h2>冰箱里的第三颗豆</h2>
+    <p>凌晨三点，奶龙打开冰箱，发现昨天数好的三颗豆只剩两颗。</p>
+    <p>走廊尽头传来一阵冰面摩擦声。凑企鹅探出头，嘴角还挂着一小片豆皮。</p>
+    <p>「我只是路过。」她说。于是奶龙决定用三个小游戏，把这件事查清楚。</p>
+    <div class="modal-actions">
+      <button class="btn" id="story-skip" type="button">跳过剧情</button>
+      <button class="btn primary" id="story-start" type="button">开始守豆</button>
+    </div>
+  </div>
+</div>
+
+<!-- 强化卡三选一 -->
+<div class="modal" id="card-modal" hidden>
+  <div class="modal-card">
+    <p class="eyebrow">奖励</p>
+    <h2>选一张强化卡</h2>
+    <p class="modal-note">选中的卡永久生效，下一局就能用上。</p>
+    <div class="card-picks" id="card-picks"></div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+<script src="games/catch.js"></script>
+<script src="games/whack.js"></script>
+<script src="games/jump.js"></script>
+</body>
+</html>
